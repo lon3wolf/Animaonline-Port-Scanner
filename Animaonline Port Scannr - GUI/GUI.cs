@@ -253,6 +253,36 @@ namespace Animaonline.Network
             PortScanner.Start();
         }
 
+        private bool CheckReadyToScan()
+        {
+            if (portRangeFrom.Value == portRangeTo.Value | portRangeFrom.Value > portRangeTo.Value)
+            {
+                MessageBox.Show(String.Format("Invalid Port Range [{0}-{1}]", portRangeFrom.Value, portRangeTo.Value), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else
+            {
+                if (!string.IsNullOrEmpty(textBoxHostName.Text))
+                {
+                    try
+                    {
+                        Dns.GetHostEntry(textBoxHostName.Text);
+                        return true;
+                    }
+                    catch (Exception ResolveHostException)
+                    {
+                        MessageBox.Show(ResolveHostException.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("'Host Name' cannot be left blank", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+            }
+        }
+
         private void buttonStartScanClick(object sender, EventArgs e)
         {
             if (ScanningInProgress)
@@ -271,31 +301,34 @@ namespace Animaonline.Network
             }
             else
             {
-                ScanningInProgress = true;
-                buttonStartScan.Image = Properties.Resources.StopScan;
-                buttonStartScan.Text = "Stop Scan";
-
-                SetStatus(" - [Scanning...]");
-                textBoxHostName.Enabled = false;
-                portRangeFrom.Enabled = false;
-                portRangeTo.Enabled = false;
-                checkBoxHideClosedPorts.Enabled = false;
-                checkBoxGetServiceName.Enabled = false;
-                contextMenuScanResults.Enabled = false;
-
-                progressBar.Minimum = (int)portRangeFrom.Value;
-                progressBar.Maximum = (int)portRangeTo.Value;
-                progressBar.Value = progressBar.Minimum;
-
-                InitializeDataTable();
-                scanResultsView.DataSource = ScanResultsTable;
-                foreach (DataGridViewColumn column in scanResultsView.Columns)
+                if (CheckReadyToScan())
                 {
-                    column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    ScanningInProgress = true;
+                    buttonStartScan.Image = Properties.Resources.StopScan;
+                    buttonStartScan.Text = "Stop Scan";
+
+                    SetStatus(" - [Scanning...]");
+                    textBoxHostName.Enabled = false;
+                    portRangeFrom.Enabled = false;
+                    portRangeTo.Enabled = false;
+                    checkBoxHideClosedPorts.Enabled = false;
+                    checkBoxGetServiceName.Enabled = false;
+                    contextMenuScanResults.Enabled = false;
+
+                    progressBar.Minimum = (int)portRangeFrom.Value;
+                    progressBar.Maximum = (int)portRangeTo.Value;
+                    progressBar.Value = progressBar.Minimum;
+
+                    InitializeDataTable();
+                    scanResultsView.DataSource = ScanResultsTable;
+                    foreach (DataGridViewColumn column in scanResultsView.Columns)
+                    {
+                        column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    }
+                    PortScanner = new Animaonline.Network.PortScannr(textBoxHostName.Text, (int)portRangeFrom.Value, (int)portRangeTo.Value);
+                    SubscribeToEvents();
+                    ScanAsync();
                 }
-                PortScanner = new Animaonline.Network.PortScannr(textBoxHostName.Text, (int)portRangeFrom.Value, (int)portRangeTo.Value);
-                SubscribeToEvents();
-                ScanAsync();
             }
         }
 
@@ -400,7 +433,22 @@ namespace Animaonline.Network
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("NotImplemented");
+            Form form1 = new Form()
+            {
+                FormBorderStyle = FormBorderStyle.None,
+                BackgroundImage = Properties.Resources.Logo,
+                Size = Properties.Resources.Logo.Size,
+                ShowIcon = false,
+                ShowInTaskbar = false
+            };
+            form1.Click += new EventHandler(form1_Click);
+            form1.ShowDialog();
+            //MessageBox.Show("NotImplemented");
+        }
+
+        void form1_Click(object sender, EventArgs e)
+        {
+            ((Form)sender).Close();
         }
         #endregion
     }

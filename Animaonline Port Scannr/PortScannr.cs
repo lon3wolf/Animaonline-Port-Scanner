@@ -94,6 +94,7 @@ namespace Animaonline.Network
 
                 HostAddress = Dns.GetHostEntry(Host).AddressList[0];
 
+
                 IPEndPoint targetEP = new IPEndPoint(HostAddress, (int)state);
 
                 scannerSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);

@@ -138,6 +138,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Benchmarks.txt" />
+    <None Include="Resources\Logo.png" />
     <Content Include="Resources\PortScannr.ico" />
     <Content Include="Resources\PortScannr2.ico" />
     <None Include="App.config" />
