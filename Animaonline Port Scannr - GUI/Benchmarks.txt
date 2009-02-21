@@ -1,0 +1,27 @@
+﻿	#Benchmark 1#
+Target Host:  localhost
+Port Range:	  0-100
+Time Taken:   00:00:13.9024183
+Target FW:    3.5
+Optimization: Enabled
+
+	#Benchmark 2#
+Target Host:  localhost
+Port Range:	  0-100
+Time Taken:   00:00:13.7452103
+Target FW:    3.5
+Optimization: Enabled
+
+	#Benchmark 3#
+Target Host:  localhost
+Port Range:	  0-100
+Time Taken:   00:00:13:8028403
+Target FW:    3.5
+Optimization: Disabled
+
+	#Benchmark 2#
+Target Host:  localhost
+Port Range:	  0-100
+Time Taken:   00:00:13:7274192
+Target FW:    2.0
+Optimization: Disabled

@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <ScanResults>
+    <Host>localhost</Host>
+    <Port>135</Port>
+    <State>Open</State>
+    <Service>loc-src/epmap</Service>
+  </ScanResults>
+  <ScanResults>
+    <Host>localhost</Host>
+    <Port>445</Port>
+    <State>Open</State>
+    <Service>SMB</Service>
+  </ScanResults>
+</DocumentElement>

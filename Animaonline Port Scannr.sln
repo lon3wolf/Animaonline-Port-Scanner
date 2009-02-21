@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animaonline Port Scannr", "Animaonline Port Scannr\Animaonline Port Scannr.csproj", "{1AC1F562-E438-4998-A6DB-CDA41EBCE06C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animaonline Port Scannr - GUI", "Animaonline Port Scannr - GUI\Animaonline Port Scannr - GUI.csproj", "{DC089D2B-2905-4CA8-81F1-72903DE75223}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs08.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Animaonline\u0020Port\u0020Scannr\u0020-\u0020GUI\\Animaonline\u0020Port\u0020Scannr\u0020-\u0020GUI.csproj
+		SccProjectName1 = Animaonline\u0020Port\u0020Scannr\u0020-\u0020GUI
+		SccLocalPath1 = Animaonline\u0020Port\u0020Scannr\u0020-\u0020GUI
+		SccProjectUniqueName2 = Animaonline\u0020Port\u0020Scannr\\Animaonline\u0020Port\u0020Scannr.csproj
+		SccProjectName2 = Animaonline\u0020Port\u0020Scannr
+		SccLocalPath2 = Animaonline\u0020Port\u0020Scannr
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1AC1F562-E438-4998-A6DB-CDA41EBCE06C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AC1F562-E438-4998-A6DB-CDA41EBCE06C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AC1F562-E438-4998-A6DB-CDA41EBCE06C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AC1F562-E438-4998-A6DB-CDA41EBCE06C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC089D2B-2905-4CA8-81F1-72903DE75223}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC089D2B-2905-4CA8-81F1-72903DE75223}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC089D2B-2905-4CA8-81F1-72903DE75223}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC089D2B-2905-4CA8-81F1-72903DE75223}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

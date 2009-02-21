@@ -1,0 +1,23 @@
+﻿<UserCombinePreferences version="1.0" filename="/media/disk/Documents and Settings/Roman Alifanov/Desktop/Animaonline Port Scannr/Animaonline Port Scannr.sln">
+  <Files>
+    <File name="Welcome" />
+    <File name="Animaonline Port Scannr - GUI/GUI.cs" line="23" column="15" />
+    <File name="Animaonline Port Scannr - GUI/GUI.Designer.cs" line="12" column="23" />
+  </Files>
+  <Views>
+    <ViewMemento id="ProjectPad">
+      <Node expanded="True">
+        <Node name="Animaonline Port Scannr - GUI" expanded="True">
+          <Node name="GUI.Designer.cs" selected="True" />
+        </Node>
+      </Node>
+    </ViewMemento>
+    <ViewMemento id="ClassPad">
+      <Node expanded="True" />
+    </ViewMemento>
+  </Views>
+  <Properties>
+    <Property key="ActiveWindow" value="/media/disk/Documents and Settings/Roman Alifanov/Desktop/Animaonline Port Scannr/Animaonline Port Scannr - GUI/GUI.Designer.cs" />
+    <Property key="ActiveConfiguration" value="Debug|Any CPU" />
+  </Properties>
+</UserCombinePreferences>
